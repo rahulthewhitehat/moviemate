@@ -46,7 +46,6 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   }
 
   Future<void> _navigateBasedOnAuth(BuildContext context) async {
-    // Navigate to the appropriate screen after the splash
     Navigator.pushReplacementNamed(context, '/home');
   }
 
@@ -67,8 +66,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   ScaleTransition(
                     scale: _scaleAnimation,
                     child: Image.asset(
-                      'assets/logo.png', // Ensure you have a logo image
-                      height: 150, // Adjust the height accordingly
+                      'assets/logo.png',
+                      height: 150,
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -76,22 +75,21 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   FadeTransition(
                     opacity: _fadeAnimation,
                     child: const Text(
-                      'MovieMate', // Customize the app name
+                      'MovieMate',
                       style: TextStyle(
-                        fontSize: 50, // Adjusted to match logo size better
+                        fontSize: 50,
                         fontWeight: FontWeight.bold,
-                        color: Colors.red, // Netflix red color
+                        color: Colors.red,
                       ),
                     ),
                   ),
                   const SizedBox(height: 8),
-                  // Tagline or description text with fade-in effect
                   FadeTransition(
                     opacity: _fadeAnimation,
                     child: const Text(
                       'Bringing Stories to Life',
                       style: TextStyle(
-                        fontSize: 16, // Adjusted to match logo size better
+                        fontSize: 16,
                         color: Colors.white70, // Lighter text color
                         fontStyle: FontStyle.italic,
                       ),
@@ -121,20 +119,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     'Made with ',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.white, // Matching app theme color
+                      color: Colors.white,
                     ),
                   ),
                   Icon(
                     Icons.favorite,
-                    color: Colors.red, // Heart icon in red
+                    color: Colors.red,
                     size: 16,
                   ),
-                  SizedBox(width: 4), // Small space between heart and username
+                  SizedBox(width: 4),
                   Text(
                     '@rahulthewhitehat',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.red, // Matching app theme color
+                      color: Colors.red,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

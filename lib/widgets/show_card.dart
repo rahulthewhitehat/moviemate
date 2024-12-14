@@ -65,7 +65,6 @@ class ShowCard extends StatelessWidget {
                       ],
                     ),
                   const SizedBox(height: 8),
-                  // Add the summary
                   Text(
                     show.summary ?? 'No summary available',
                     style: const TextStyle(

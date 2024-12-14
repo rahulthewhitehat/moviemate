@@ -45,8 +45,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Row(
           children: [
             Image.asset(
-              'assets/logo.png', // Path to your logo image
-              height: 30, // Small size for the logo
+              'assets/logo.png', // logo image
+              height: 30,
             ),
             const SizedBox(width: 10), // Space between logo and title
             const Text(
