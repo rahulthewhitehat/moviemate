@@ -5,10 +5,12 @@ import 'screens/search_screen.dart';
 import 'screens/details_screen.dart';
 
 void main() {
-  runApp(MovieApp());
+  runApp(const MovieApp());
 }
 
 class MovieApp extends StatelessWidget {
+  const MovieApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,10 +22,10 @@ class MovieApp extends StatelessWidget {
       ),
       initialRoute: '/splash',
       routes: {
-        '/splash': (context) => SplashScreen(),
-        '/home': (context) => HomeScreen(),
-        '/search': (context) => SearchScreen(),
-        '/details': (context) => DetailsScreen(),
+        '/splash': (context) => const SplashScreen(),
+        '/home': (context) => const HomeScreen(),
+        '/search': (context) => const SearchScreen(),
+        '/details': (context) => const DetailsScreen(),
       },
     );
   }
