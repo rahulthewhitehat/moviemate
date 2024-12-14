@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
 
-  const CustomBottomNavigationBar({Key? key, required this.currentIndex}) : super(key: key);
+  const CustomBottomNavigationBar({super.key, required this.currentIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
       selectedItemColor: Colors.red,
       unselectedItemColor: Colors.grey,
       currentIndex: currentIndex,
-      items: [
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',

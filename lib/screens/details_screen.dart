@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../models/show_model.dart';
 
 class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final Show show = ModalRoute.of(context)!.settings.arguments as Show;
@@ -28,30 +30,30 @@ class DetailsScreen extends StatelessWidget {
                   children: [
                     Text(
                       show.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       children: [
                         Text(
                           show.type,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                             color: Colors.grey,
                           ),
                         ),
-                        SizedBox(width: 10),
-                        Text(
+                        const SizedBox(width: 10),
+                        const Text(
                           '•',
                           style: TextStyle(color: Colors.grey),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Text(
                           show.status,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                             color: Colors.grey,
                           ),
@@ -59,49 +61,49 @@ class DetailsScreen extends StatelessWidget {
                       ],
                     ),
                     if (show.premiered != null) ...[
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         'Premiered: ${show.premiered}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
                     if (show.networkName != null) ...[
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         'Network: ${show.networkName}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                         ),
                       ),
                     ],
                     if (show.scheduleTime != null) ...[
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         'Scheduled at: ${show.scheduleTime} on ${show.scheduleDays?.join(', ')}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                         ),
                       ),
                     ],
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       'Genres: ${show.genres.join(', ')}',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                     ),
                     if (show.rating != null) ...[
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         children: [
-                          Icon(Icons.star, color: Colors.amber),
-                          SizedBox(width: 5),
+                          const Icon(Icons.star, color: Colors.amber),
+                          const SizedBox(width: 5),
                           Text(
                             show.rating.toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -109,34 +111,34 @@ class DetailsScreen extends StatelessWidget {
                         ],
                       ),
                     ],
-                    SizedBox(height: 20),
-                    Text(
+                    const SizedBox(height: 20),
+                    const Text(
                       'Summary',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       show.summary ?? 'No summary available',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                     ),
                     if (show.officialSite != null) ...[
-                      SizedBox(height: 20),
-                      Text(
+                      const SizedBox(height: 20),
+                      const Text(
                         'Official Site',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Text(
                         show.officialSite!,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           color: Colors.blue,
                         ),
